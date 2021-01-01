@@ -1,0 +1,5 @@
+# We ignore my deploy script.
+deploy.sh
+
+# We also ignore the published site.
+public/

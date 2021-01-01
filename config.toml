@@ -1,0 +1,50 @@
+baseURL = "https://josnav.es/"
+languageCode = "en-us"
+title = "Jose Navarro"
+theme = "ink"
+paginate = 5
+
+copyright = "Attribution-ShareAlike 4.0 International"
+
+pygmentsstyle = "vs"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+subtitle = "I like computers and hot coffee."
+featherIconsCDN = true
+mode = "auto"
+
+# Nav.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/jotanavarro"
+
+[[params.social]]
+name = "Linkedin"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/josnav"
+
+[[params.social]]
+name = "Instagram"
+icon = "instagram"
+url = "https://www.instagram.com/jlnav"
+
+[taxonomies]
+tag = "tags"
