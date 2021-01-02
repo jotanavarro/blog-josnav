@@ -39,7 +39,7 @@ For more details, see Info node ‘(emacs)ls in Lisp’.
 
 Which tells us that by default Emacs expects `ls` to support `--dired`.  And sadly in MacOS:
 
-```
+```sh
 jose@almanzora ~ % ls --dired
 ls: illegal option -- -
 usage: ls [-@ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1%] [file ...]
@@ -51,7 +51,7 @@ So according to the documentation above, we can do "like on MS Windows" and use 
 
 You can tell Emacs to behave like it does in _Windows_ by appending this to your configuration file:
 
-```lisp
+```elisp
 (setq ls-lisp-use-insert-directory-program nil)
 (require 'ls-lisp)
 ```
@@ -64,13 +64,13 @@ Setting `dired-use-ls-dired` to anything but `nil` will make Emacs pass `--dired
 
 You can install the GNU implementation of the `coreutils` from homebrew like this:
 
-```
+```sh
 brew install coreutils
 ```
 
 This is quite neat, as it will install all the coreutils from GNU and add them to your `PATH` prefixed by the letter `g`.  For example the _GNU ls_ will be `gls` and the _MacOS ls_ will just be `ls`.  It is easy to verify with a simple `which`
 
-```
+```sh
 jose@almanzora ~ % which ls
 /bin/ls
 jose@almanzora ~ % which gls
@@ -81,14 +81,14 @@ Now I must introduce the variable `insert-directory-program` which tells Emacs w
 
 So now we know how to tell Emacs to pass `--dired` to `ls` and how to tell it to use any arbitrary program for this, so we must append this to our configuration file `dotspacemacs`:
 
-```lisp
+```elisp
 (setq dired-use-ls-dired t
       insert-directory-program "/usr/local/bin/gls")
 ```
 
 If we use the same configuration on different system families, we can encapsulate the previous block with a `when` that only applies those variables for _MacOS_ like this:
 
-```lisp
+```elisp
 (when (string= system-type "darwin")
   (setq dired-use-ls-dired t
         insert-directory-program "/usr/local/bin/gls"))

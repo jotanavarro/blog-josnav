@@ -6,9 +6,8 @@ paginate = 5
 
 copyright = "Attribution-ShareAlike 4.0 International"
 
-pygmentsstyle = "vs"
+pygmentsstyle = "xcode"
 pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
 
 [params]
 subtitle = "I like computers and hot coffee."
