@@ -46,5 +46,10 @@ name = "Instagram"
 icon = "instagram"
 url = "https://www.instagram.com/jlnav"
 
+[[params.social]]
+name = "RSS"
+icon = "rss"
+url = "/index.xml"
+
 [taxonomies]
 tag = "tags"
