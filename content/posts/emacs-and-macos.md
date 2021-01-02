@@ -51,7 +51,7 @@ So according to the documentation above, we can do "like on MS Windows" and use 
 
 You can tell Emacs to behave like it does in _Windows_ by appending this to your configuration file:
 
-```
+```lisp
 (setq ls-lisp-use-insert-directory-program nil)
 (require 'ls-lisp)
 ```
@@ -81,14 +81,14 @@ Now I must introduce the variable `insert-directory-program` which tells Emacs w
 
 So now we know how to tell Emacs to pass `--dired` to `ls` and how to tell it to use any arbitrary program for this, so we must append this to our configuration file `dotspacemacs`:
 
-```
+```lisp
 (setq dired-use-ls-dired t
       insert-directory-program "/usr/local/bin/gls")
 ```
 
 If we use the same configuration on different system families, we can encapsulate the previous block with a `when` that only applies those variables for _MacOS_ like this:
 
-```
+```lisp
 (when (string= system-type "darwin")
   (setq dired-use-ls-dired t
         insert-directory-program "/usr/local/bin/gls"))
