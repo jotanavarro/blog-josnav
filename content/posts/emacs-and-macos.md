@@ -7,7 +7,7 @@ tags: ["emacs", "gnu", "macos"]
 
 I recently migrated from GNU/Linux to MacOS.  My favorite tool to edit text and code is Emacs, in particular I use the [Spacemacs](https://www.spacemacs.org) distribution and the evil mode.  There are several reasons why I enjoy using this tool, but I will not delve in them (for now).
 
-But in MacOS, the first time we boot Emacs, you will be greeted by an error message claiming that `ls does not support --dired; see "dired-use-ls-dired" for more details.`.  In Emacs we can see the documentation of a variable with `C-h v`, so if we type the variable name there and we can read:
+But in MacOS, the first time we boot Emacs, we will be greeted by an error message claiming that `ls does not support --dired; see "dired-use-ls-dired" for more details.`.  In Emacs we can see the documentation of a variable with `C-h v`, so if we type the variable name there and we can read:
 
 ```
 dired-use-ls-dired is a variable defined in ‘dired.el’.
