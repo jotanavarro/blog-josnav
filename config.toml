@@ -50,5 +50,10 @@ name = "RSS"
 icon = "rss"
 url = "/index.xml"
 
+[[params.social]]
+name = "mail"
+icon = "mail"
+url = "mailto:blog@josnav.es"
+
 [taxonomies]
 tag = "tags"
